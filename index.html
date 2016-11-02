@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>My Todo App</title>
+    <link href="http://cdn.bootcss.com/normalize/5.0.0/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+</head>
+<body>
+<div class="msg">
+    <span class="msg-content"></span>
+    <span class="anchor confirmed">知道了</span>
+</div>
+<!-- 总容器开始 -->
+<div class="container"> 
+	<h1>我的Todo</h1>
+	<form class="add-task">
+		<input type="text" name="content" placeholder="e.g. 明天下午三点面试" autocomplete="off" autofocus>
+		<button type="submit">submit</button>
+	</form>
+	<!-- 清单列表开始 -->
+	<div class="task-list"> 
+<!-- 	 	<div class="task-item">
+	 		<span><input type="checkbox"></span>
+	 		<span class="task-content">item</span>
+	 		<span>delete</span>
+	 		<span>detail</span>
+	 	</div> -->
+	</div>
+	<div class="task-list-complete"></div>
+	<!-- 清单列表结束 -->
+	<div class="task-detail-mask"></div>		
+	<div class="task-detail">
+<!-- 		<div class="content">下午记得买菜</div>
+		<div>
+			<div class="desc">
+				<textarea name="" id=""></textarea>
+			</div>
+		</div>
+		<div class="remind">
+			<input type="date">
+			 <button type="submit">submit</button> 
+		</div> -->
+	</div>
+
+</div>
+<!-- 总容器结束 -->
+	<video class="alerter" src="alert.mp3"></video>
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/jquery.datetimepicker.full.js"></script>
+	<script src="js/store.min.js"></script>
+	<script src="js/pop.js"></script>
+	<script src="js/base.js"></script>
+
+</body>
+</html>
