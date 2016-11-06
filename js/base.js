@@ -19,10 +19,6 @@
     var $msg_confirm = $msg.find('.confirmed');
     var $alerter = $('.alerter');
 
-
-
-
-
 	var task_list = [];
 
 	init();
