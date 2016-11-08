@@ -7,8 +7,10 @@
 }
 
 body{
-	background: #00334b;
-	color: #fff;
+	min-width: 320px;
+    background-color: #393D49;
+    color: #DCDCCC;
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,STHeiti,Helvetica,Arial,Verdana,"sans-serif",Microsoft YaHei;
 }
 .container{
 	max-width: 900px;
@@ -49,11 +51,12 @@ input[type=date]:focus {
 }
 
 textarea{
+	resize: none;
 	min-height: 128px;
 }
 
 .task-list , .task-list-complete {
-	margin:5px 0;
+	margin:10px 0;
 }
 
 button {

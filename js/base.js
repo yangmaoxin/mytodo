@@ -30,7 +30,7 @@
 		// 禁用默认行为
 		e.preventDefault();
 		// 获取新Task的值
-		$input = $(this).find('input[name=content]')
+		$input = $(this).find('input[name=content]');		
 		new_task.content = $input.val();
 		if(!new_task.content) {return false};
 		// 存入新Task
@@ -79,9 +79,7 @@
 		$checkbox_complete.on('click', function () {
 		  var $this = $(this);
 		  var index = $this.parent().parent().data('index');
-		  console.log(index);
 		  var item = get(index);
-		  console.log(item.complete);
 		  if (item.complete){
 		  	update_task(index, {complete: false});
 		  }else{
@@ -132,7 +130,7 @@
 
 	  /*更新Task*/
 	function update_task(index, data) {
-		if (!index || !task_list[index]) return;
+		if ( index == null || task_list[index] == null) return;
 		//task_list[index] = data;
 		task_list[index] = $.extend({}, task_list[index], data);
 		refresh_task_list();
@@ -141,8 +139,7 @@
 
   /*渲染指定Task的详细信息*/
 	function render_task_detail(index) {
-		if (index === undefined || !task_list[index]) return;
-
+		if (index == null || !task_list[index]) return;
 		var item = task_list[index];
 
 		var tpl =
@@ -250,6 +247,9 @@
 		$task_list.html("");
 		$task_list_complete.html("");
 		var complete_items = [];
+
+		//console.log("task_list",task_list);
+
 		for (var i = 0;i < task_list.length; i++) {
 			var item = task_list[i];
 			if (item && item.complete) {
@@ -288,7 +288,7 @@
 
 	//渲染单条task模板
 	function render_task_item(data , index){
-		if(!data || !index) return;
+		if( data == null || index == null ) return;
 		//item模板
 		var list_item_tpl = 
 			'<div class="task-item" data-index="'+index+'">'+
